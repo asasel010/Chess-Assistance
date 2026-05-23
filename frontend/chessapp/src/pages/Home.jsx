@@ -1,15 +1,11 @@
 
-import { useContext, useState/*, useRef, useEffect*/ } from "react";
+import { useState/*, useRef, useEffect*/ } from "react";
 // import { Crown, User, History, Settings, TrendingUp } from "lucide-react";
-import { Link } from 'react-router-dom'
-import { AuthContext } from "../App";
 import heroImg from '../assets/chess-bg.png'
-import knightLogo from "../assets/knight-logo.png";
 import '../App.css'
 
 function Home() {
   const [monitoringStarted, setMonitoringStarted] = useState(false)
-  const { auth, logout } = useContext(AuthContext);
   // const [username, setUsername] = useState('')
   // const [playerStats, setPlayerStats] = useState(null)
   // const [playerError, setPlayerError] = useState('')
@@ -65,65 +61,11 @@ function Home() {
 const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main className="app" style={{ backgroundImage: `url(${heroImg})` }}>
-      <nav className="navbar">
-        <div className="logo">ChessTrack™</div>
-
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <a href="#about">About</a>
-          <Link to="/chesstrack">ChessTrack</Link>
-
-          {auth ? (
-            <>
-              <span className="nav-user">{`Logged in as ${auth.email}`}</span>
-              <button className="auth-button" onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link className="auth-link" to="/login">
-                Login
-              </Link>
-              <Link className="auth-link" to="/register">
-                Register
-              </Link>
-            </>
-          )}
-
-          <div className="profile-menu-container">
-            <button
-              className="settings-btn"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-    <img
-      src={knightLogo}
-      alt="Knight Menu"
-      className="knight-icon"
-    />
-  </button>
-
-  {menuOpen && (
-    <div className="profile-dropdown">
-      <button>👤 My Profile</button>
-      <button>📈 View Sessions</button>
-      <button>♟️ Elo Boosting</button>
-      <button>⚙️ Settings</button>
-    </div>
-  )}
-</div>
-        </div>
-      </nav>
-
-      <section id="home" className="hero-section">
-    
 
         <div className="hero-content">
           <p className="eyebrow">Chess Performance Assistant</p>
           <h1>Track your environment. Improve your game.</h1>
           
-
-
           <button
             className="start-btn"
             onClick={() => setMonitoringStarted(true)}
@@ -131,54 +73,10 @@ const [menuOpen, setMenuOpen] = useState(false);
             Start Monitoring
           </button>
         </div>
-      </section>
 
-      {showSleepForm && (
-  <section className="sleep-card">
-    <h2>Sleep Tracker</h2>
-
-    <div className="sleep-inputs">
-      <div>
-        <p>Time you went to sleep</p>
-        <input
-          type="time"
-          value={sleepTime}
-          onChange={(e) => setSleepTime(e.target.value)}
-        />
-      </div>
-
-      <div>
-        <p>Time you woke up</p>
-        <input
-          type="time"
-          value={wakeTime}
-          onChange={(e) => setWakeTime(e.target.value)}
-        />
-      </div>
-
-      <button onClick={calculateSleepTime}>
-        Calculate Sleep
-      </button>
-    </div>
-
-    {sleepResult && (
-      <p>
-        You slept for: <strong>{sleepResult}</strong>
-      </p>
-    )}
-  </section>
-)}
-      
       {monitoringStarted && (
         <section id="track" className="dashboard">
-            {monitoringStarted && (
-           <button
-             className="sleep-toggle-btn"
-             onClick={() => setShowSleepForm(!showSleepForm)}
-           >
-            How much time did I sleep?
-           </button>
-)}
+            {monitoringStarted }
           <h2>Live Metrics</h2>
 
           <div className="cards-grid">

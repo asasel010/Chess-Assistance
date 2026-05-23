@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import ChessTrack from "./pages/ChessTrack";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Header from "./components/Header";
 import { clearAuth, getStoredAuth, storeAuth } from "./auth";
 
 export const AuthContext = createContext(null);
@@ -28,6 +29,7 @@ function App() {
   return (
     <AuthContext.Provider value={{ auth, login, logout }}>
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/chesstrack" element={<ChessTrack />} />
