@@ -1,13 +1,15 @@
 
-import { useState/*, useRef, useEffect*/ } from "react";
+import { useContext, useState/*, useRef, useEffect*/ } from "react";
 // import { Crown, User, History, Settings, TrendingUp } from "lucide-react";
 import { Link } from 'react-router-dom'
+import { AuthContext } from "../App";
 import heroImg from '../assets/chess-bg.png'
 import knightLogo from "../assets/knight-logo.png";
 import '../App.css'
 
 function Home() {
   const [monitoringStarted, setMonitoringStarted] = useState(false)
+  const { auth, logout } = useContext(AuthContext);
   // const [username, setUsername] = useState('')
   // const [playerStats, setPlayerStats] = useState(null)
   // const [playerError, setPlayerError] = useState('')
@@ -67,15 +69,33 @@ const [menuOpen, setMenuOpen] = useState(false);
         <div className="logo">ChessTrack™</div>
 
         <div className="nav-links">
-        <Link to="/">Home</Link>
-        <a href="#about">About</a>
-        <Link to="/chesstrack">ChessTrack</Link>
-        
-        <div className="profile-menu-container">
-  <button
-    className="settings-btn"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
+          <Link to="/">Home</Link>
+          <a href="#about">About</a>
+          <Link to="/chesstrack">ChessTrack</Link>
+
+          {auth ? (
+            <>
+              <span className="nav-user">{`Logged in as ${auth.email}`}</span>
+              <button className="auth-button" onClick={logout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="auth-link" to="/login">
+                Login
+              </Link>
+              <Link className="auth-link" to="/register">
+                Register
+              </Link>
+            </>
+          )}
+
+          <div className="profile-menu-container">
+            <button
+              className="settings-btn"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
     <img
       src={knightLogo}
       alt="Knight Menu"
