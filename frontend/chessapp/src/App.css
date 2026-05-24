@@ -219,13 +219,39 @@ body {
   position: relative;
 }
 
+.notification-toggle {
+  position: relative;
+  padding: 6px;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 0 0 2px rgba(1, 1, 1, 0.95);
+}
+
 .profile-dropdown {
   position: absolute;
   top: 60px;
   right: 0;
 
-  width: 230px;
-  padding: 10px;
+  width: 320px;
+  padding: 14px;
 
   background: rgba(15, 15, 15, 0.92);
   backdrop-filter: blur(12px);
@@ -235,11 +261,72 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
 
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 
   z-index: 1000;
+}
+
+.notification-dashboard {
+  color: #f8f8f8;
+}
+
+.notification-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.notification-header p {
+  margin: 4px 0 0;
+  color: #c5c5c5;
+  font-size: 13px;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-item {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.notification-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.notification-title-row strong {
+  font-size: 14px;
+}
+
+.notification-title-row span {
+  color: #d8aa55;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.notification-item p {
+  margin: 0;
+  color: #dedede;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.notification-empty {
+  padding: 18px 12px;
+  border-radius: 14px;
+  text-align: center;
+  color: #cfcfcf;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .profile-dropdown button {
@@ -421,7 +508,7 @@ body {
 
 .nav-user {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .auth-button {
@@ -430,9 +517,10 @@ body {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   padding: 0;
-  margin-left: 16px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
+  height: 28px;
+  width: 50px;
 }
 
 .auth-button:hover {
