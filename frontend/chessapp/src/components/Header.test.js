@@ -42,3 +42,24 @@ test('shows a delayed home-page notification and opens the dashboard', async () 
 
   jest.useRealTimers();
 });
+
+test('adds notifications from app events', () => {
+  renderHeader('/');
+
+  act(() => {
+    window.dispatchEvent(
+      new CustomEvent('app-notification', {
+        detail: {
+          title: 'Playtime limit reached',
+          content: 'You have reached your planned playtime limit.',
+        },
+      })
+    );
+  });
+
+  expect(screen.getByLabelText('1 unread notification')).toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: /open notifications/i }));
+
+  expect(screen.getByText('Playtime limit reached')).toBeInTheDocument();
+});

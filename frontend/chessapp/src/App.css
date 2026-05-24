@@ -428,7 +428,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 120px 24px;
   background: #010101;
 }
 
@@ -573,4 +572,118 @@ body {
   color: #111;
   font-weight: 800;
   cursor: pointer;
+}
+
+.health-summary {
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.health-summary-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.health-summary-header h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.health-inline-btn {
+  white-space: nowrap;
+}
+
+.health-empty-state {
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.health-empty-state p {
+  margin: 0;
+  color: #e7e7e7;
+  line-height: 1.6;
+}
+
+.health-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.health-stat-card {
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.health-stat-card p {
+  margin: 0;
+  color: #dfdfdf;
+  line-height: 1.6;
+}
+
+.health-stat-value {
+  display: block;
+  margin: 14px 0;
+  font-size: 28px;
+  color: #d8aa55;
+}
+
+.health-action-btn {
+  margin-top: 16px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(216, 170, 85, 0.6);
+  background: linear-gradient(135deg, #d8aa55, #8f6425);
+  color: #111;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.health-action-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.health-recommendations {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.health-recommendations p:last-child {
+  margin: 10px 0 0;
+  color: #f2f2f2;
+  line-height: 1.7;
+}
+
+.health-success {
+  color: #8cf0b3;
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .health-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

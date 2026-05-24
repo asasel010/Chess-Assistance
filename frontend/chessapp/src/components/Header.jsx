@@ -42,6 +42,32 @@ function Header() {
   }, [location.pathname, notifications.length]);
 
   useEffect(() => {
+    const handleAppNotification = (event) => {
+      const notification = event.detail;
+
+      if (!notification?.title || !notification?.content) {
+        return;
+      }
+
+      setNotifications((currentNotifications) => [
+        {
+          id: `${Date.now()}-${Math.random()}`,
+          title: notification.title,
+          content: notification.content,
+          read: false,
+        },
+        ...currentNotifications,
+      ]);
+    };
+
+    window.addEventListener("app-notification", handleAppNotification);
+
+    return () => {
+      window.removeEventListener("app-notification", handleAppNotification);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setMenuOpen(false);
