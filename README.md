@@ -1,3 +1,3 @@
-# SEP4-insert-project-name-later
+# SEP4-chess-assistance
 
 npm start 
