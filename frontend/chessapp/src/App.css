@@ -399,6 +399,129 @@ body {
   cursor: pointer;
 }
 
+/* Environment panel styles */
+.environment-panel {
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+}
+
+.environment-panel h3 {
+  margin: 8px 0 18px;
+  font-size: 20px;
+}
+
+.environment-panel .health-stat-value {
+  font-size: 28px;
+  margin: 8px 0;
+}
+
+.light-item strong {
+  font-size: 18px;
+}
+
+.env-grid {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.env-controls {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.env-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.add-light-row input.light-input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+}
+
+.env-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(216,170,85,0.4);
+  background: linear-gradient(135deg, #d8aa55, #8f6425);
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lights-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.light-item {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.light-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.toggle-light {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  cursor: pointer;
+}
+
+.light-slider-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.light-slider-row input[type="range"] {
+  flex: 1;
+}
+
+.lumens-label {
+  min-width: 64px;
+  text-align: right;
+  color: #cfcfcf;
+}
+
+/* delete button for lights */
+.delete-light {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(239,68,68,0.12);
+  color: #ffb4b4;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.delete-light:hover {
+  background: rgba(239,68,68,0.2);
+}
+
 .sleep-toggle-btn {
   display: block;
   margin-top: 12px;
