@@ -364,9 +364,94 @@ body {
   color: white;
 }
 
-.track-hero {
+.track-hero,
+.analysis-hero {
   max-width: 900px;
   margin-bottom: 48px;
+}
+
+.analysis-page {
+  min-height: 100vh;
+  padding: 120px 64px 80px;
+  background: #010101;
+  color: white;
+}
+
+.analysis-form {
+  display: grid;
+  gap: 16px;
+  max-width: 700px;
+}
+
+.file-upload-label {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+  padding: 16px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.file-upload-label input[type="file"] {
+  display: none;
+}
+
+.file-name,
+.analysis-error,
+.analysis-loading {
+  margin: 0;
+  color: #d8aa55;
+}
+
+.analysis-error {
+  color: #f28d8d;
+}
+
+.analysis-results {
+  margin-top: 32px;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.analysis-card {
+  margin-top: 18px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.analysis-card strong {
+  display: block;
+  font-size: 28px;
+  margin: 14px 0;
+  color: #d8aa55;
+}
+
+.analysis-player {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.analysis-player span {
+  display: block;
+  color: #cfcfcf;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 960px) {
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .player-search {

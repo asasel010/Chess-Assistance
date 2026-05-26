@@ -1,0 +1,34 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2026.05.22"]
+[Round "-"]
+[White "asasel010"]
+[Black "camillop21"]
+[Result "1-0"]
+[CurrentPosition "3R1Qk1/1p5p/2p3p1/8/5n2/pP2P3/P1PK1PPP/8 b - - 0 32"]
+[Timezone "UTC"]
+[ECO "D00"]
+[ECOUrl "https://www.chess.com/openings/Queens-Pawn-Opening-Accelerated-London-System-2...Nc6"]
+[UTCDate "2026.05.22"]
+[UTCTime "20:14:19"]
+[WhiteElo "1019"]
+[BlackElo "999"]
+[TimeControl "300"]
+[Termination "asasel010 won by checkmate"]
+[StartTime "20:14:19"]
+[EndDate "2026.05.22"]
+[EndTime "20:19:45"]
+[Link "https://www.chess.com/analysis/game/live/169092438326/analysis"]
+[WhiteUrl "https://images.chesscomfiles.com/uploads/v1/user/113075134.e626930a.50x50o.ab700525cb8d.jpg"]
+[WhiteCountry "112"]
+[WhiteTitle ""]
+[BlackUrl "https://images.chesscomfiles.com/uploads/v1/user/3698854.bb275381.50x50o.3fcfe5b1c054.jpg"]
+[BlackCountry "3"]
+[BlackTitle ""]
+
+1. d4 d5 2. Bf4 Nc6 3. Nc3 Nf6 4. Nb5 e5 5. dxe5 Nd7 $2 6. Qxd5 a6 7. Nc3 Be7 8.
+O-O-O O-O 9. Nf3 Nb6 $6 10. Qxd8 Bxd8 11. e3 Be7 12. Be2 Be6 13. Kb1 Nb4 14. b3 $6
+a5 15. Nb5 $6 c6 16. Nc7 Rac8 $6 17. Nxe6 fxe6 18. Kb2 a4 19. Bc4 $2 Kh8 $2 20. Bxe6
+Rcd8 $6 21. Nd4 $6 N6d5 22. Bxd5 Rxd5 $6 23. Ne6 Rxd1 24. Rxd1 Nd5 25. Nxf8 Bxf8
+26. e6 a3+ 27. Kc1 Nc3 $2 28. Rd8 $1 Kg8 29. e7 Ne2+ 30. Kd2 Nxf4 $6 31. e8=Q $9 g6 $6
+32. Qxf8# 1-0

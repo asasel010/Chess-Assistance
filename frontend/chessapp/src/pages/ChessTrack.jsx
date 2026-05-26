@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../App.css'
+import heroImg from '../assets/chess-bg.png'
 
 function ChessTrack() {
   const [username, setUsername] = useState('')
@@ -77,7 +78,7 @@ function ChessTrack() {
   const bullet = getModeStats('chess_bullet')
 
   return (
-    <main className="track-page">
+    <main className="app track-page" style={{ backgroundImage: `url(${heroImg})` }}>
       <section className="track-hero">
         <p className="eyebrow">Chess.com Player Lookup</p>
         <h1>Search player performance</h1>

@@ -88,7 +88,7 @@ function Header() {
       </div>
 
       <div className="nav-links">
-        <Link className="nav-link" to="/">
+        <Link className="nav-link" to="/chessanalysis">
           ChessAnalysis
         </Link>
 

@@ -1,6 +1,7 @@
 ﻿import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createContext, useEffect, useState } from "react";
 import Home from "./pages/Home";
+import ChessAnalysis from "./pages/ChessAnalysis";
 import ChessTrack from "./pages/ChessTrack";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -33,6 +34,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/chessanalysis" element={<ChessAnalysis />} />
           <Route path="/chesstrack" element={<ChessTrack />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
